@@ -14,7 +14,7 @@ const MessageInput = () => {
   //   console.log('clicked');
   //   const message = 'hello';
   //   console.log(message);
-  //   const res = await axios.post('http://localhost:3001/api/message', {
+  //   const res = await axios.post('https://robot-joystick.vercel.app/api/message', {
   //     message: message,
   //   });
   //   if (res.data.message === 'received') console.log('success');
@@ -26,7 +26,7 @@ const MessageInput = () => {
       const message = 'W';
       console.log('clicked');
       const res = await axios.post(
-        `http://localhost:3001/api/message?message=${message}`,
+        `https://robot-joystick.vercel.app/api/message?message=${message}`,
         {
           message: message,
         }
@@ -43,7 +43,7 @@ const MessageInput = () => {
       const message = 'A';
       console.log('clicked');
       const res = await axios.post(
-        `http://localhost:3001/api/message?message=${message}`,
+        `https://robot-joystick.vercel.app/api/message?message=${message}`,
         {
           message: message,
         }
@@ -60,7 +60,7 @@ const MessageInput = () => {
       const message = 'S';
       console.log('clicked');
       const res = await axios.post(
-        `http://localhost:3001/api/message?message=${message}`,
+        `https://robot-joystick.vercel.app/api/message?message=${message}`,
         {
           message: message,
         }
@@ -77,7 +77,7 @@ const MessageInput = () => {
       const message = 'D';
       console.log('clicked');
       const res = await axios.post(
-        `http://localhost:3001/api/message?message=${message}`,
+        `https://robot-joystick.vercel.app/api/message?message=${message}`,
         {
           message: message,
         }
