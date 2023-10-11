@@ -1,7 +1,10 @@
 const express = require('express');
 const mqtt = require('mqtt');
 
+const cors = require('cors');
+
 const app = express();
+app.use(cors());
 const port = 3001; // Replace with your desired port number
 const mqttBrokerUrl = 'mqtt://10.71.172.126'; // Replace with the Raspberry Pi's IP address
 
@@ -39,6 +42,19 @@ app.post('/api/message', (req, res) => {
   }
 });
 
+// console.log(response);
+
+// client.on('connect', () => {
+//   console.log('Connected to MQTT broker');
+// });
+
 app.listen(port, () => {
   console.log(`Express server is running on port ${port}`);
+
+  // Send a message to ROS2 upon loading
+  // while(1)
+  // {
+  // const initialMessage = 'Hello, ROS2 upon loading!';
 });
+
+// app.use('/api', routes);
