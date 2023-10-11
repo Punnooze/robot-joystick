@@ -40,6 +40,5 @@ app.post('/api/message', (req, res) => {
 });
 
 app.listen(port, () => {
-  alert('hello');
   console.log(`Express server is running on port ${port}`);
 });
