@@ -6,10 +6,16 @@ const cors = require('cors');
 const app = express();
 app.use(cors());
 const port = 3001; // Replace with your desired port number
-const mqttBrokerUrl = 'mqtt://10.71.172.126'; // Replace with the Raspberry Pi's IP address
+const mqttBrokerUrl = 'm16.cloudmqtt.com'; // Replace with the Raspberry Pi's IP address
+const mqttUsername = 'pmdwqnai';
+const mqttPassword = 'VNkknHwohUuo';
 
 const topic = '/ros2_topic'; // Replace with the same ROS2 topic you subscribed to
-const client = mqtt.connect(mqttBrokerUrl);
+const client = mqtt.connect(mqttBrokerUrl, {
+  username: mqttUsername,
+  password: mqttPassword,
+  port: 18245,
+});
 
 global.response = null;
 
