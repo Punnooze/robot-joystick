@@ -3,6 +3,8 @@
 import axios from 'axios';
 
 const MessageInput = () => {
+  const host = 'http://localhost:3001/';
+  // const host = 'https://robot-joystick.vercel.app/';
   // const [w, setW] = useState(false);
   // const [a, setA] = useState(null);
   // const [s, setS] = useState(null);
@@ -25,12 +27,9 @@ const MessageInput = () => {
     try {
       const message = 'W';
       console.log('clicked');
-      const res = await axios.post(
-        `https://robot-joystick.vercel.app/api/message?message=${message}`,
-        {
-          message: message,
-        }
-      );
+      const res = await axios.post(`${host}api/message?message=${message}`, {
+        message: message,
+      });
       if (res.data.message === 'received') {
         console.log('success');
       }
@@ -42,12 +41,9 @@ const MessageInput = () => {
     try {
       const message = 'A';
       console.log('clicked');
-      const res = await axios.post(
-        `https://robot-joystick.vercel.app/api/message?message=${message}`,
-        {
-          message: message,
-        }
-      );
+      const res = await axios.post(`${host}api/message?message=${message}`, {
+        message: message,
+      });
       if (res.data.message === 'received') {
         console.log('success');
       }
@@ -113,7 +109,8 @@ const MessageInput = () => {
     <div className="bg-background h-[100vh] w-[100vw] flex justify-center items-center">
       <div className="w-[90vh] h-[70vh] bg-darkgrey flex justify-around items-center rounded-md">
         <div className="flex flex-col h-[40vh] justify-around bg-darkergrey px-[40px] rounded-md">
-          <button className='bg-lightgrey text-background border-2 border-background outline-none hover:bg-background hover:text-lightgrey hover:border-lightgrey duration-200 focus:border-lightgrey focus:border-2'
+          <button
+            className="bg-lightgrey text-background border-2 border-background outline-none hover:bg-background hover:text-lightgrey hover:border-lightgrey duration-200 focus:border-lightgrey focus:border-2"
             onClick={
               // setW('W')
               handleW
@@ -123,7 +120,8 @@ const MessageInput = () => {
           >
             W
           </button>
-          <button className='bg-lightgrey text-background border-2 border-background outline-none hover:bg-background hover:text-lightgrey hover:border-lightgrey duration-200 focus:border-lightgrey focus:border-2'
+          <button
+            className="bg-lightgrey text-background border-2 border-background outline-none hover:bg-background hover:text-lightgrey hover:border-lightgrey duration-200 focus:border-lightgrey focus:border-2"
             onClick={
               // setS('S')
               handleS
@@ -133,7 +131,8 @@ const MessageInput = () => {
           </button>
         </div>
         <div className="flex  w-[40vw] justify-around bg-darkergrey py-[40px] rounded-md">
-          <button className='bg-lightgrey text-background border-2 border-background outline-none hover:bg-background hover:text-lightgrey hover:border-lightgrey duration-200 focus:border-lightgrey focus:border-2'
+          <button
+            className="bg-lightgrey text-background border-2 border-background outline-none hover:bg-background hover:text-lightgrey hover:border-lightgrey duration-200 focus:border-lightgrey focus:border-2"
             // onClick={() => {
             //   // setA('A');
             //   console.log('clicking a');
@@ -146,7 +145,8 @@ const MessageInput = () => {
           >
             A
           </button>
-          <button className='bg-lightgrey text-background border-2 border-background outline-none hover:bg-background hover:text-lightgrey hover:border-lightgrey duration-200 focus:border-lightgrey focus:border-2'
+          <button
+            className="bg-lightgrey text-background border-2 border-background outline-none hover:bg-background hover:text-lightgrey hover:border-lightgrey duration-200 focus:border-lightgrey focus:border-2"
             onClick={
               // setD('D')
               handleD
