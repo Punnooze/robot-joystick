@@ -1,10 +1,8 @@
 const express = require('express');
 const mqtt = require('mqtt');
 
-const cors = require('cors');
 
 const app = express();
-app.use(cors());
 const port = 3001; // Replace with your desired port number
 const mqttBrokerUrl = 'mqtt://10.71.172.126'; // Replace with the Raspberry Pi's IP address
 
